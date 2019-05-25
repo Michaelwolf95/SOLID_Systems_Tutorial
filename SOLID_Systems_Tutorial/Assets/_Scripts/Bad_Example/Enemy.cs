@@ -1,15 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 namespace SOLID_Tutorial.Bad_Example
 {
-    // Example of BAD coding practices (part 1)
-    public class PlayerHealth : MonoBehaviour
+    // Example of BAD coding practices.
+    // Enemy character.
+    public class Enemy : MonoBehaviour
     {
-        public float health = 100f;
+        public float health = 25f;
         private bool isDead = false;
 
+        public float damageValue = 25f;
+
+        // Deal damage to the enemy.
         public void ApplyDamage(float damage)
         {
             if (isDead) return;
@@ -22,13 +25,23 @@ namespace SOLID_Tutorial.Bad_Example
                 isDead = true;
                 DoDeathAnimation();
 
-                RestartLevel();
+                AddScore(1);
             }
             else
                 DoTakeDamageAnimation();
-
-            UpdateHealthBar();
         }
+
+        // Deal damage to the player on contact.
+        private void OnCollisionEnter(Collision col)
+        {
+            if (col.gameObject.tag == "Player")
+            {
+                Player hp = col.gameObject.GetComponent<Player>();
+
+                hp.ApplyDamage(damageValue);
+            }
+        }
+
 
         #region Dummy Methods
         private void DoDeathAnimation()
@@ -36,7 +49,7 @@ namespace SOLID_Tutorial.Bad_Example
 
         }
 
-        private void RestartLevel()
+        private void AddScore(int score)
         {
 
         }

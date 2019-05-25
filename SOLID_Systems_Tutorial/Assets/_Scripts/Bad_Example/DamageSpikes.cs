@@ -5,19 +5,20 @@ namespace SOLID_Tutorial.Bad_Example
 {
     // Example of BAD coding practices (part 3)
     // This script deals damage to BOTH the Player and Enemies.
-    public class DamageCollider : MonoBehaviour
+    public class DamageSpikes : MonoBehaviour
     {
         public float damageValue = 25f;
-        private void OnCollisionEnter(Collision collision)
+
+        private void OnCollisionEnter(Collision col)
         {
-            if(collision.gameObject.tag == "Player")
+            if(col.gameObject.tag == "Player")
             {
-                PlayerHealth hp = collision.gameObject.GetComponent<PlayerHealth>();
+                Player hp = col.gameObject.GetComponent<Player>();
                 hp.ApplyDamage(damageValue);
             }
-            else if (collision.gameObject.tag == "Enemy")
+            else if (col.gameObject.tag == "Enemy")
             {
-                EnemyHealth hp = collision.gameObject.GetComponent<EnemyHealth>();
+                Enemy hp = col.gameObject.GetComponent<Enemy>();
                 hp.ApplyDamage(damageValue);
             }
         }
