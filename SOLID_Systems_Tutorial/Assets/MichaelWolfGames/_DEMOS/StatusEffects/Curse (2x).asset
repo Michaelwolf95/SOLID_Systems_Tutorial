@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3ba61a6bfbf5c49893ea1c6172ba77, type: 3}
+  m_Name: Curse (2x)
+  m_EditorClassIdentifier: 
+  effectName: Cursed!
+  effectAttachment: {fileID: 0}
+  effectIcon: {fileID: 1168599405998328, guid: 483e003ca0c3fc1429d1a8673c32965c, type: 2}
+  multiplier: 2
+  flatModifier: 0
+  useOverrideDescription: 0
+  overrideDescription: 

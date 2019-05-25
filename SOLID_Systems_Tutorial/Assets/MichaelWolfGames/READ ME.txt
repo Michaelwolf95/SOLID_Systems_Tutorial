@@ -1,0 +1,11 @@
+Michael Wolf Games
+Universal Health and Damage System
+(Damage Core)
+
+The most up-to-date documentation can be found at the following link:
+https://docs.google.com/document/d/1Vph0j3Vhif4ReE71qmuuJI7v7iU0pNOX5-dDfPJ31_g/edit?usp=sharing
+
+ToDo:
+- Attacks
+- Destructable Objects
+- 
