@@ -6,6 +6,7 @@ Created for my workshop at SGDA Summit 2019 - "S.O.L.I.D System Engineering".
 * [Presentation Slides](https://docs.google.com/presentation/d/18cRCely-ToLOBphZRXUjZFPt04Tj4JyNk7D7uLFxXMw/edit?usp=sharing "Presentation Slides")
 
 (Did not get to tags implement before workshop)
+
 Each step in the tutorial will be marked with a tag. 
 Step through each tagged commit to see each step in the tutorial.
 
