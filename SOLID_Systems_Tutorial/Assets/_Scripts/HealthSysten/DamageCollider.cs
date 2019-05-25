@@ -7,11 +7,12 @@ namespace SOLID_Tutorial.HealthSystem
     {
         [SerializeField] protected float damageValue = 25f;
 
-        private void OnCollisionEnter(Collision col)
+        private void OnCollisionEnter2D(Collision2D col)
         {
             IDamageable dam = col.gameObject.GetComponent<IDamageable>();
             if(dam != null)
             {
+                Debug.Log("Applying Damage.");
                 dam.ApplyDamage(this, damageValue);
             }
         }
