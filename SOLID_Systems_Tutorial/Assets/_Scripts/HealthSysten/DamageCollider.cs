@@ -12,7 +12,6 @@ namespace SOLID_Tutorial.HealthSystem
             IDamageable dam = col.gameObject.GetComponent<IDamageable>();
             if(dam != null)
             {
-                Debug.Log("Applying Damage.");
                 dam.ApplyDamage(this, damageValue);
             }
         }

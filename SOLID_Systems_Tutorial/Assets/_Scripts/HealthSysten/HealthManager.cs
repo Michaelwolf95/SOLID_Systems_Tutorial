@@ -27,5 +27,9 @@ namespace SOLID_Tutorial.HealthSystem
 
             OnTakeDamageEvent(sender, damage);
         }
+
+
+        public float MaxHealth { get { return maxHealth; } }
+        public float CurrentHealth { get { return currentHealth; } }
     }
 }
